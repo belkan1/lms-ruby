@@ -1,0 +1,2 @@
+module Reader::BaseHelper
+end

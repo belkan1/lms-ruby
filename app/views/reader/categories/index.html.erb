@@ -1,0 +1,24 @@
+<div class="jumbotron">
+	<h1 class="display-4">Reader View Categories</h1>
+	<p>view book categories for user</p>
+	<%= link_to 'logout', destroy_user_session_path, method: :delete %>
+</div>
+
+<div class="container">
+	<table class="table table-striped">
+		<thead>
+			<th>id</th>
+			<th>Category Name</th>
+		</thead>
+		<tbody>
+			<% @categories.each do |cat| %> 
+			<tr>
+				<td><%= cat.id %></td>
+				<td><%= cat.name %></td>
+			</tr>
+			<% end%>
+		</tbody>
+		
+	</table>
+
+</div>

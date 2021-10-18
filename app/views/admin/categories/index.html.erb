@@ -1,0 +1,29 @@
+<div class="jumbotron">
+	<h1 class="display-4">Admin Dashboard</h1>
+	<p>Welcome to Admin Dashboard</p>
+	<%= link_to 'logout', destroy_user_session_path, method: :delete %>
+</div>
+
+<div class="container">
+	<table class="table table-striped">
+		<thead>
+			<th>id</th>
+			<th>Category Name</th>
+			<th>Action</th>
+		</thead>
+		<tbody>
+			<% @categories.each do |cat| %> 
+			<tr>
+				<td><%= cat.id %></td>
+				<td><%= cat.name %></td>
+				<td><%= link_to 'Edit',edit_admin_category_path(cat), class: 'btn btn-warning' %>
+					<%= link_to 'Delete',admin_category_path(cat), class: 'btn btn-danger', method: :delete ,data: { confirm: "Are you sure?" } %>
+				</td>
+			</tr>
+			<% end%>
+		</tbody>
+		
+	</table>
+
+	<%= link_to 'Add New Category',new_admin_category_path,class:'btn btn-primary' %>
+</div>

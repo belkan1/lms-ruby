@@ -1,0 +1,17 @@
+<% if current_user.avatar.attached? %>
+<%= image_tag(current_user.avatar, alt: "avatar", class: "avatar",size: "100x100", id: "avatar",class: 'rounded-circle float-right m-3') %>
+<% end %>
+<div class="jumbotron">
+
+	<h1>Welcome to Reader dashboard</h1>
+    
+	<%= link_to 'logout', destroy_user_session_path, method: :delete %>
+</div>
+<div class='container'>
+	<div class="btn-group btn-group-lg">
+	  <%= link_to 'View Categories',reader_categories_path, class:"btn btn-outline-info" %>
+	  <%= link_to 'View Books',reader_books_path, class:"btn btn-outline-success" %>
+	  <%= link_to 'View My Issue Requests',reader_issues_path, class:"btn btn-outline-danger" %>
+	  <%= link_to 'Create new Issue Request',new_reader_issue_path, class:"btn btn-outline-dark" %>
+	</div>
+</div>

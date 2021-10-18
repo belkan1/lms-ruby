@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  book_id: MyString
+  user_id: MyString
+  issue_date: MyString
+  return_date: MyString
+  status: 1
+
+two:
+  book_id: MyString
+  user_id: MyString
+  issue_date: MyString
+  return_date: MyString
+  status: 1

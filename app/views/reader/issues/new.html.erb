@@ -1,0 +1,36 @@
+<div class="jumbotron">
+  <h1 class="display-4">Reader New Issue Requests</h1>
+  <p>My Book Issue Requests</p>
+  <%= link_to 'logout', destroy_user_session_path, method: :delete %>
+</div>
+
+<div class="container">
+  <div class="container">
+    <%= form_for [:reader,@issue] do |form| %>
+  <div class="form-group">
+    <%= form.label :issue_date %><br>
+    <%= form.date_select :issue_date,class:'form-control' %>
+  </div>
+  <% @issue.errors.full_messages_for(:issue_date).each do |message| %>
+    <div class="text-danger"><%= message %></div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :return_date %><br>
+    <%= form.date_select :return_date,class:'form-control' %>
+  </div>
+  </div>
+  <% @issue.errors.full_messages_for(:return_date).each do |message| %>
+    <div class="text-danger"><%= message %></div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.select :book_id,@books.map{ |c| [c.title,c.id]},{},{:class=>'form-control'}%>
+  </div>
+
+   <div>
+    <%= form.submit "Request a book", class:'btn btn-outline-secondary' %>
+  </div>
+<% end %>
+  </div>
+</div>
