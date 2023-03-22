@@ -36,6 +36,8 @@ install_plugin Capistrano::SCM::Git
 require 'capistrano/rails'
 require 'capistrano/passenger'
 require 'capistrano/rbenv'
+require 'capistrano/bundler'
 
 set :rbenv_type, :user
 set :rbenv_ruby, '3.2.1'
+append :linked_dirs, '.bundle'
