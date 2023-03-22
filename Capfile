@@ -39,5 +39,5 @@ require 'capistrano/rbenv'
 require 'capistrano/bundler'
 
 set :rbenv_type, :user
-set :rbenv_ruby, '3.2.1'
+set :rbenv_ruby, '2.7.2'
 append :linked_dirs, '.bundle'
