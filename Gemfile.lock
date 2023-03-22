@@ -174,7 +174,6 @@ GEM
     msgpack (1.6.1)
     multi_json (1.15.0)
     multipart-post (2.3.0)
-    mysql2 (0.5.5)
     net-imap (0.3.4)
       date
       net-protocol
@@ -316,7 +315,6 @@ DEPENDENCIES
   friendly_id (~> 5.4.0)
   jbuilder (~> 2.7)
   listen (~> 3.2)
-  mysql2 (~> 0.5.5)
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.7)
